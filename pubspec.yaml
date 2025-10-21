@@ -52,6 +52,12 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+  deferred-components:
+    # Example: Define your components (e.g., 'myModule')
+    - name: boxModule
+      libraries:
+        - package:your_app/box.dart  # Không khoảng trắng sau :, toàn bộ là string "package:your_app/box.dart"
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

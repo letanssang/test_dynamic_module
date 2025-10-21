@@ -1,0 +1,32 @@
+apply plugin: "com.android.dynamic-feature"
+apply plugin: "kotlin-android"
+
+android {
+    namespace "com.example.test_dynamic_module.boxModule"
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // Đây là phần Flutter sẽ copy asset khi build deferred component
+    sourceSets {
+        main {
+            assets.srcDirs += "${project.layout.buildDirectory}/intermediates/flutter/debug/deferred_assets"
+            jniLibs.srcDirs += "${project.layout.buildDirectory}/intermediates/flutter/debug/deferred_libs"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation project(":app")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+}

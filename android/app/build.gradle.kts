@@ -37,10 +37,20 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    dynamicFeatures += setOf(":boxModule")
 }
+
 
 flutter {
     source = "../.."
 }
+
+dependencies {
+    // ... các dependencies hiện có
+    implementation("com.squareup.okhttp3:okhttp:5.2.1")
+}
+
+
 
 

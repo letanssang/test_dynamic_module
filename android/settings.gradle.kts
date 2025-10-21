@@ -24,3 +24,5 @@ plugins {
 }
 
 include(":app")
+include(":boxModule")
+project(":boxModule").projectDir = file("boxModule")

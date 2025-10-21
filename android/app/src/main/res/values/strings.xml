@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boxModuleName">boxModule</string>  <!-- Tên module của bạn, có thể thay value nếu cần hiển thị khác -->
+</resources>
