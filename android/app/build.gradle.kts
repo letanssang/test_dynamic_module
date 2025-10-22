@@ -45,4 +45,8 @@ flutter {
     source = "../.."
 }
 
+dependencies {
+    implementation("com.google.android.play:core:1.8.0")
+}
+
 
