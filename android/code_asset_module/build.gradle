@@ -1,0 +1,34 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader("UTF-8") { reader ->
+        localProperties.load(reader)
+    }
+}
+
+apply plugin: "com.android.dynamic-feature"
+
+android {
+    namespace = "com.example.test_dynamic_module.code_asset_module"
+    compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    sourceSets {
+        applicationVariants.all { variant ->
+            main.assets.srcDirs += "${project.layout.buildDirectory}/intermediates/flutter/${variant.name}/deferred_assets"
+            main.jniLibs.srcDirs += "${project.layout.buildDirectory}/intermediates/flutter/${variant.name}/deferred_libs"
+        }
+    }
+
+    defaultConfig {
+        minSdk 24
+    }
+}
+
+dependencies {
+    implementation(project(":app"))
+}

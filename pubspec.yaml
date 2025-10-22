@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  video_player: ^2.10.0
 
 dev_dependencies:
   flutter_test:
@@ -52,13 +53,20 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
+  deferred-components:
+    - name: code_asset_module
+      libraries:
+        - package:test_dynamic_module/modules/code_asset_module/code_asset_module.dart
+      assets:
+        - assets/videos/music.mp4
+    - name: asset_only_module
+      assets:
+        - assets/images/
+
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

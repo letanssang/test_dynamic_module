@@ -37,6 +37,8 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    dynamicFeatures += setOf(":code_asset_module", ":asset_only_module")
 }
 
 flutter {
