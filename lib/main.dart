@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_dynamic_module/home_view.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 

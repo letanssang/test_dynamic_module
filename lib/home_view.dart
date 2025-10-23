@@ -61,17 +61,21 @@ class _HomeViewState extends State<HomeView> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _buildModuleItem(
-                      'Module Code + Asset',
-                      _loadCodeAssetModule,
+                    Flexible(
+                      child: _buildModuleItem(
+                        'Module Code + Asset',
+                        _loadCodeAssetModule,
+                      ),
                     ),
-                    _buildModuleItem('Module Asset', () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const ImagesPageView(),
-                        ),
-                      );
-                    }),
+                    Flexible(
+                      child: _buildModuleItem('Module Asset', () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const ImagesPageView(),
+                          ),
+                        );
+                      }),
+                    ),
                   ],
                 ),
               ),

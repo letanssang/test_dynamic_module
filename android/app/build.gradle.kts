@@ -46,7 +46,7 @@ flutter {
 }
 
 dependencies {
-    implementation("com.google.android.play:core:1.8.0")
+    implementation("com.google.android.play:core:1.10.3")
 }
 
 
