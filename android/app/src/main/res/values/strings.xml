@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="code_asset_moduleName">code_asset_module</string>
+  <string name="asset_only_moduleName">asset_only_module</string>
+</resources>

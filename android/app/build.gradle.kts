@@ -37,10 +37,16 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    dynamicFeatures += setOf(":code_asset_module", ":asset_only_module")
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation("com.google.android.play:core:1.10.3")
 }
 
 

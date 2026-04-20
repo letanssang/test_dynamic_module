@@ -24,3 +24,5 @@ plugins {
 }
 
 include(":app")
+include(":code_asset_module")
+include(":asset_only_module")
